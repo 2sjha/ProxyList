@@ -1,4 +1,20 @@
-from Tkinter import *
+import tkinter as tk
+from tkinter import Menu
+from tkinter import Label
+from tkinter import Entry
+from tkinter import Button
+from tkinter import Toplevel
+from tkinter import LEFT
+from tkinter import YES
+from tkinter import Frame
+from tkinter import Scrollbar
+from tkinter import Text
+from tkinter import RIGHT
+from tkinter import Y
+from tkinter import END
+
+
+
 import random
 
 global NameEntry
@@ -38,11 +54,11 @@ def bynamepushed():
 
 #Search the ProxyList By Name
 def ByName(Name):
-	try:
-		data=open('data.ssj','r')										#opening data file
-	except IOError, e:
-		message=Toplevel()
-		Label(message,text="Data File Not Found",justify=LEFT).pack(expand=YES, padx=10,pady=10)
+	#try:
+	data=open('resources/data.dat','r')										#opening data file
+	#except IOError as e:
+	#	message=Toplevel()
+	#	Label(message,text="Data File Not Found",justify=LEFT).pack(expand=YES, padx=10,pady=10)
 	out=open('result.txt','w')
 	Name=Name.upper()
 	BranchCode=''
@@ -93,11 +109,11 @@ def bybranchpushed():
 	
 #Search All the Proxies for a Particular Branch
 def ByBranch(BranchTwoDigits):
-	try:
-		data=open('data.ssj','r')										#opening data file
-	except IOError, e:
-		message=Toplevel()
-		Label(message,text="Data File Not Found",justify=LEFT).pack(expand=YES, padx=10,pady=10)
+	#try:
+	data=open('resources/data.dat','r')										#opening data file
+	#except IOError as e:
+	#	message=Toplevel()
+	#	Label(message,text="Data File Not Found",justify=LEFT).pack(expand=YES, padx=10,pady=10)
 	out=open('result.txt','w')
 	BranchCode=''
 	Record=''												
@@ -146,11 +162,11 @@ def randomlypushed():
 	
 #Search Randomly for N number of Proxies
 def Randomly(NProxy):
-	try:
-		data=open('data.ssj','r')										#opening data file
-	except IOError, e:
-		message=Toplevel()
-		Label(message,text="Data File Not Found",justify=LEFT).pack(expand=YES, padx=10,pady=10)
+	#try:
+	data=open('resources/data.dat','r')										#opening data file
+	#except IOError as e:
+	#	message=Toplevel()
+	#	Label(message,text="Data File Not Found",justify=LEFT).pack(expand=YES, padx=10,pady=10)
 	out=open('result.txt','w')										#opening output File
 	Randomlist=[]
 	BranchCode=''												
@@ -181,7 +197,7 @@ def Randomly(NProxy):
 	message=Toplevel()
 	message.title("Results")
 	if not counter:
-		out.write('YInvalid Details')								#not found case
+		out.write('Invalid  Details')								#not found case
 		Label(message,text="Not Found",justify=LEFT).pack(expand=YES, padx=10,pady=10)
 	else:
 		ResultFrame=Frame(message,height=100,width=40)
@@ -204,7 +220,7 @@ def main():
 	global BranchEntry
 	global RandomNumberEntry
 	
-	root = Tk() # Create the root (base) window where all widgets go
+	root = tk.Tk() # Create the root (base) window where all widgets go
 
 	root.title("Proxy Program")
 
