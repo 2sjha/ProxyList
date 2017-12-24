@@ -25,7 +25,7 @@ def GetBranchCode(Roll):
 #Search By Name
 def ByName():														
 	data=open('resources/data.dat','r')										#opening data file
-	out=open('result.dat','w')										#Opening Output File
+	out=open('result.txt','w')										#Opening Output File
 	Name=input('Enter Name:')										#Input  Name
 	Name=Name.upper()
 	BranchCode=''													
@@ -57,7 +57,7 @@ def ByName():
 #Search All the Proxies for a Particular Branch
 def ByBranch():														
 	data=open('resources/data.dat','r')										#opening data file
-	out=open('result.dat','w')
+	out=open('result.txt','w')
 	BranchTwoDigits=input("Enter the two digits from roll number which identify a branch\n")
 	BranchCode='072.'												#BranchCode for UserID. For now take the branch code as 072
 	counter=0														#counter for the not found result
@@ -85,7 +85,7 @@ def ByBranch():
 #Search Randomly for N number of Proxies
 def Randomly():														
 	data=open('resources/data.dat','r')										#opening data file
-	out=open('result.dat','w')										#opening output File
+	out=open('result.txt','w')										#opening output File
 	NProxy=input("Enter \'N\'\n")
 	Randomlist=[]
 	BranchCode='072.'												
