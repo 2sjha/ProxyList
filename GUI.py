@@ -32,7 +32,7 @@ def bynamepushed():
 	txt=NameEntry.get()
 	if not txt: 
 		message=Toplevel()
-		Label(message,text="Naam Daal toh pehle!",justify=LEFT).pack(expand=YES, padx=10,pady=10)
+		Label(message,text="Invalid Details",justify=LEFT).pack(expand=YES, padx=10,pady=10)
 	else: ByName(txt)
 	NameEntry.delete(0,END)
 
@@ -68,7 +68,7 @@ def ByName(Name):
 	message=Toplevel()
 	message.title("Results")
 	if not counter:
-		out.write('You Ass-Face, dick-foot, can\'t even enter a name properly')								#not found case
+		out.write('Invalid Details')								#not found case
 		Label(message,text="Not Found",justify=LEFT).pack(expand=YES, padx=10,pady=10)
 	else:
 		ResultFrame=Frame(message,height=100,width=40)
@@ -87,7 +87,7 @@ def bybranchpushed():
 	txt=BranchEntry.get()
 	if not txt: 
 		message=Toplevel()
-		Label(message,text="Kuch Number Daal toh de Bhai!",justify=LEFT).pack(expand=YES, padx=10,pady=10)
+		Label(message,text="Invalid Details",justify=LEFT).pack(expand=YES, padx=10,pady=10)
 	else: ByBranch(txt)
 	BranchEntry.delete(0,END)
 	
@@ -121,7 +121,7 @@ def ByBranch(BranchTwoDigits):
 	message=Toplevel()
 	message.title("Results")
 	if not counter:
-		out.write('You Ass-Face, dick-foot, can\'t even enter a name properly')								#not found case
+		out.write('Invalid Details')								#not found case
 		Label(message,text="Not Found",justify=LEFT).pack(expand=YES, padx=10,pady=10)
 	else:
 		ResultFrame=Frame(message,height=100,width=40)
@@ -140,7 +140,7 @@ def randomlypushed():
 	txt=RandomNumberEntry.get()
 	if not txt:
 		message=Toplevel()
-		Label(message,text="Hadd Ho Gyi BC, Koi Number toh Enter kar!",justify=LEFT).pack(expand=YES, padx=10,pady=10)
+		Label(message,text="Invalid Details",justify=LEFT).pack(expand=YES, padx=10,pady=10)
 	else: Randomly(int(txt))
 	RandomNumberEntry.delete(0,END)
 	
@@ -181,7 +181,7 @@ def Randomly(NProxy):
 	message=Toplevel()
 	message.title("Results")
 	if not counter:
-		out.write('You Ass-Face, dick-foot, can\'t even enter a name properly')								#not found case
+		out.write('YInvalid Details')								#not found case
 		Label(message,text="Not Found",justify=LEFT).pack(expand=YES, padx=10,pady=10)
 	else:
 		ResultFrame=Frame(message,height=100,width=40)
@@ -206,7 +206,7 @@ def main():
 	
 	root = Tk() # Create the root (base) window where all widgets go
 
-	root.title("Proxy Hack Program")
+	root.title("Proxy Program")
 
 	menubar=Menu(root)
 	filemenu=Menu(menubar)
