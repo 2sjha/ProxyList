@@ -1,4 +1,4 @@
-# ProxyListGUI
+# ProxyList
 
 ProxyList is a program to get the userids and passwords for old LAN of IIT BHU.
 So, essentially this program is of no use to anyone.
